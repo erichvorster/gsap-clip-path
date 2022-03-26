@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "poppins", serif;
+}
+
+body:hover .container {
+  -webkit-clip-path: polygon(6% 6%, 95% 6%, 95% 95%, 6% 95%);
+          clip-path: polygon(6% 6%, 95% 6%, 95% 95%, 6% 95%);
+}
+
+.container {
+  height: 100vh;
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  -webkit-transition: -webkit-clip-path 1s;
+  transition: -webkit-clip-path 1s;
+  transition: clip-path 1s;
+  transition: clip-path 1s, -webkit-clip-path 1s;
+  width: 100%;
+}
+
+.container .img {
+  background-image: url("../assets/car1.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.container .content {
+  position: absolute;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container .content h1 {
+  font-size: 4rem;
+  position: absolute;
+}
+/*# sourceMappingURL=main.css.map */
