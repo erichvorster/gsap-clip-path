@@ -4,6 +4,7 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 body {
@@ -12,12 +13,8 @@ body {
   font-family: "poppins", serif;
 }
 
-body:hover .container {
-  -webkit-clip-path: polygon(6% 6%, 95% 6%, 95% 95%, 6% 95%);
-          clip-path: polygon(6% 6%, 95% 6%, 95% 95%, 6% 95%);
-}
-
-.container {
+.container,
+.container-2 {
   height: 100vh;
   position: absolute;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -29,13 +26,16 @@ body:hover .container {
   width: 100%;
 }
 
-.container .img {
-  background-image: url("../assets/car1.jpg");
+.container .img,
+.container-2 .img {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/car1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url("../assets/car1.jpg");
   background-size: cover;
   height: 100vh;
 }
 
-.container .content {
+.container .content,
+.container-2 .content {
   position: absolute;
   z-index: 1;
   display: -ms-grid;
@@ -45,8 +45,18 @@ body:hover .container {
   width: 100%;
 }
 
-.container .content h1 {
+.container .content h1,
+.container-2 .content h1 {
   font-size: 4rem;
   position: absolute;
+}
+
+.container-2 {
+  z-index: -1;
+}
+
+.container-2 .img {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/car2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url("../assets/car2.jpg");
 }
 /*# sourceMappingURL=main.css.map */
